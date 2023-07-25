@@ -10,53 +10,72 @@
 
 
 let form = document.querySelector("form");
-let userName = document.querySelector("#firstName");
-let lastName = document.querySelector("#lastName");
-const warning = document.getElementById("warning");
-
-
-form.addEventListener("submit", function(e) {
-    e.preventDefault()
-
-    if (userName.value === '' || lastName.value === ''){
-        warning.style.display = "block"
-
-        setTimeout(() => {
-            warning.style.display = "none"
-        }, 5000)
-        return
-    }else{
-        alert(`
-        Hello ${userName.value}🎊,
-        your form has been submitted succesfully.
-        Your lastName is ${lastName.value}.`
-        );
-
-        userName.value = "";
-        lastName.value = "";
-    }
-
-});
-
-
-// let form = document.querySelector("form");
-// let userName = document.querySelector("#firstName");
-// let lastName = document.querySelector("#lastName");
-// const warning = document.getElementById("warning");
-
 let userFirstName = document.querySelector("#firstName");
 let userLastName = document.querySelector("#lastName");
 let userCountry = document.querySelector("#country");
 let userAge = document.querySelector("#age");
 
 
-// async function completeForm(){
-//     let formCompleted = await ();
-//     return formCompleted
-// }
+
+form.addEventListener("submit", function(e) {
+    
+    // let r = e.userAge
+    // alert(r)
+    // completeForm(e.userFirstName, userLastName, e.userAge, e.userCountry)
+    let y = fetchUserDetails(e.userFirstName, userLastName, e.userAge, e.userCountry)
+
+    alert(y)
+    userFirstName = "";
+    userLastName = "";
+    userCountry = "";
+    userAge = "";
+
+
+
+});
+
+
+
+
+function textFieldsNotEmpty(userFirstName, userLastName, userCountry, userAge){
+    if(userFirstName !== "" && userLastName !== " "){
+        if (userCountry !== "" && userAge !== ""){
+            return true
+        }
+    } return false
+
+}
+
+
+
+async function completeForm(userFirstName, userLastName, userCountry, userAge){
+
+    let formCompleted = await textFieldsNotEmpty(userFirstName, userLastName, userCountry, userAge);
+    
+    if (formCompleted === true){
+        return 'form completer by user'
+    }else{
+        return 'user must complete form'
+    }
+   
+}
+
 
 
 function fetchUserDetails(userFirstName, userLastName, userCountry, userAge){
 
-    alert(`My name is ${userFirstName} ${userLastName}. I am from ${userCountry}. I am ${userAge} years old. `)
+    if (formCompleted === true){
+        return(
+            `My name is ${userFirstName} ${userLastName}.
+            I am from ${userCountry}. I am ${userAge} years old.
+            `)
+        
+         
+    }else{
+        alert('the user has not completed the form')
+    }
+   
+   
+    
+
 }
