@@ -10,15 +10,15 @@
 
 
 let form = document.querySelector("form");
-let userName = document.querySelector("#userName");
-let email = document.querySelector("#email");
+let userName = document.querySelector("#firstName");
+let lastName = document.querySelector("#lastName");
 const warning = document.getElementById("warning");
 
 
 form.addEventListener("submit", function(e) {
     e.preventDefault()
 
-    if (userName.value === '' || email.value === ''){
+    if (userName.value === '' || lastName.value === ''){
         warning.style.display = "block"
 
         setTimeout(() => {
@@ -29,44 +29,25 @@ form.addEventListener("submit", function(e) {
         alert(`
         Hello ${userName.value}🎊,
         your form has been submitted succesfully.
-        Your email is ${email.value}.`
+        Your lastName is ${lastName.value}.`
         );
 
         userName.value = "";
-        email.value = "";
+        lastName.value = "";
     }
 
 });
 
 
+// let form = document.querySelector("form");
+// let userName = document.querySelector("#firstName");
+// let lastName = document.querySelector("#lastName");
+// const warning = document.getElementById("warning");
 
-
-
-
-
-
-
-
-
-
-
-
-// function hello(){
-//     let doc = document.body;
-//     doc.hidden = true
-// }
-
-
-// doc.getElementById("subtmitButton").addEventListener("click", hello);
-
-
-
-
-// let userFirstName = document.getElementById('picture');
-// console.log(doc)
-// let userLastName = 
-// let userCountry = 
-// let userAge = 
+let userFirstName = document.querySelector("#firstName");
+let userLastName = document.querySelector("#lastName");
+let userCountry = document.querySelector("#country");
+let userAge = document.querySelector("#age");
 
 
 // async function completeForm(){
@@ -75,7 +56,7 @@ form.addEventListener("submit", function(e) {
 // }
 
 
-// function fetchUserDetails(userFirstName, userLastName, userCountry, userAge){
+function fetchUserDetails(userFirstName, userLastName, userCountry, userAge){
 
-//     return `My name is ${userFirstName} ${userLastName}. I am from ${userCountry}. I am ${userAge} years old. `
-// }
+    alert(`My name is ${userFirstName} ${userLastName}. I am from ${userCountry}. I am ${userAge} years old. `)
+}
