@@ -10,8 +10,15 @@ body{
 	justify-content: center;
 }
 
-/* input{
-	color: black;
-	height: 15px;
+form{
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+select, input{
+	border: 1px solid black;
+	
 	border-radius: 5px;
-} */
+	padding: 6px;
+} 
