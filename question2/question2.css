@@ -16,9 +16,14 @@ form{
 	gap: 5px;
 }
 
-select, input{
+select, input, button{
 	border: 1px solid black;
 	
 	border-radius: 5px;
 	padding: 6px;
 } 
+
+#warning{
+    color:#f63232;
+    display: none;
+}

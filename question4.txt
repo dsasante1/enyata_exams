@@ -1,0 +1,6 @@
+1073741824 bytes make a Gigabyte
+
+a byte is 8 bits and A gigabyte is 1,073,741,824 (230) bytes.
+1,024 megabytes, or 1,048,576 kilobytes.
+A Gigabyte is a unit used to measure digital storage and is based on "Binary multiples of Bytes
+Gigabytes = Bytes ÷ 1,073,741,824
