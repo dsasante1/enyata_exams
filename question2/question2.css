@@ -1,8 +1,17 @@
  
-	*{
-		margin: 0px;
-		padding: 0px;
-		box-sizing: border-box;
-	}
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
 	
-	
+body{
+	display: flex;
+	justify-content: center;
+}
+
+/* input{
+	color: black;
+	height: 15px;
+	border-radius: 5px;
+} */
