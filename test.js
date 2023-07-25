@@ -1,14 +1,21 @@
-const assert = require('assert');
 
 const fizzBuzz = require('./question1.js');
 
 
-
-assert.strictEqual(fizzBuzz(3), ["1","2","Fizz"]);
-
-assert.strictEqual(fizzBuzz(5), ["1","2","Fizz","4","Buzz"]);
-
-assert.strictEqual(fizzBuzz(15), ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz",
-"13","14","FizzBuzz"]);
+test('fizz buzz input 3', () => {
+    expect(fizzBuzz(3)).toStrictEqual(["1","2","Fizz"]);
+   
+  });
 
 
+  test('fizz buzz input 5', () => {
+  expect(fizzBuzz(5)).toStrictEqual(["1","2","Fizz","4","Buzz"]);
+});
+
+
+
+test('fizz buzz input 15', () => {
+  expect(fizzBuzz(15)).toStrictEqual(["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz",
+  "13","14","FizzBuzz"]);
+
+});
