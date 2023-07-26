@@ -2,27 +2,26 @@
 // ascending order and the other should sort the array in descending order.
 
 
-
-
-
 let arrayItem = [1, 4, 3, 2,5]
 
 
 function sortAscendingOrder(arrayItem){
-    console.log(arrayItem.sort())
-    return arrayItem.sort()
-
-
+    if (Array.isArray(arrayItem)) {
+        return arrayItem.sort()
+    }else{
+        return 'invalid input. enter an array of numbers'
+    }
 }
 
 function sortDescendingOrder(arrayItem){
-    console.log(arrayItem.sort().reverse())
-    return arrayItem.sort().reverse()
+     if (Array.isArray(arrayItem)) {
+        return arrayItem.sort().reverse()
+    }else{
+        return 'invalid input. enter an array of numbers'
+    }
+
 }
 
-
-sortAscendingOrder(arrayItem)
-sortDescendingOrder(arrayItem)
 
 
 module.exports = sortAscendingOrder;

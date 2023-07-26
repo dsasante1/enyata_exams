@@ -19,20 +19,12 @@ let userAge = document.querySelector("#age");
 
 form.addEventListener("submit", function(e) {
     
-    // let r = e.userAge
-    // alert(r)
-    // completeForm(e.userFirstName, userLastName, e.userAge, e.userCountry)
-    let y = fetchUserDetails(e.userFirstName, userLastName, e.userAge, e.userCountry)
 
-    alert(y)
-    userFirstName = "";
-    userLastName = "";
-    userCountry = "";
-    userAge = "";
 
 
 
 });
+
 
 
 
