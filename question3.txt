@@ -1,7 +1,7 @@
 
 a. DOM
 
-Document Object Manipulation is an interface. This interface exposes an HTML structure
+Document Object Module is an interface. This interface exposes an HTML structure
 and makes it available for manipulation by javascript dynamically. This adds a dynamic element
 to a static website.
 
