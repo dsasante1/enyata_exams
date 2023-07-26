@@ -7,14 +7,13 @@
 
 
 body{
-	padding-left: 500px;
-	padding-right: 500px;
+	padding: 20px;
 	font-family: 'Roboto', sans-serif;
 
 }
 
 .loginPage{
-	padding: 10px;
+	padding: 20px;
 	border: solid rgb(223, 216, 216);
 	border-radius: 5px;
 	display: flex;
@@ -75,4 +74,37 @@ footer span{
 footer p{
 	font-size: smaller;
 	text-align: center;
+}
+
+
+@media only screen and (min-width: 800px) {
+	body{
+		padding: 200px;
+		padding-top: 5px;
+	
+	}
+
+
+	#image{
+		width: 170px;
+		padding: 5px;
+	
+	}
+
+}
+
+@media only screen and (min-width: 1200px) {
+	body{
+		padding: 400px;
+		padding-top: 20px;
+	
+	}
+
+
+	#image{
+		width: 170px;
+		padding: 10px;
+	
+	}
+
 }
