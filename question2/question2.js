@@ -43,7 +43,7 @@ class UserForm {
 
     returnUserDetails(){
 
-        if(this.completeForm() instanceof Error){
+        if(this.completeForm instanceof Error){
             alert('fill the fields of the form')
         }
         alert(`My name is ${this.userFirstName.value} ${this.userLastName.value}. I am from ${this.userCountry.value}. I am ${this.userAge.value} years old.`) 
