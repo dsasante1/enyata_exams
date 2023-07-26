@@ -28,19 +28,26 @@ class UserForm {
 
     async completeForm(){
     
-        if(this.userFirstName === "" || this.userLastName === "" || this.userCountry === "" || this.userAge === ""){
-            throw new Error('a form is empty. fill it')
-        }else{
-            return this.userFirstName.value, this.userLastName.value, this.userCountry.value, this.userAge.value
-        }
+   
+        await function checkFields(){
+            
+            if(this.userFirstName.value === "" || this.userLastName.value === "" || this.userCountry.value === "" || this.userAge.value === ""){
+                return new Error('a form is empty. fill it')
+            }else{
+                return 'forms filled'
+            }
+        } 
     } 
     
 
 
     returnUserDetails(){
 
+        if(this.completeForm() instanceof Error){
+            alert('fill the fields of the form')
+        }
         alert(`My name is ${this.userFirstName.value} ${this.userLastName.value}. I am from ${this.userCountry.value}. I am ${this.userAge.value} years old.`) 
-}
+        }
 
 
 }
@@ -48,6 +55,8 @@ class UserForm {
 
 
 let userFormDetails = new UserForm(userFirstName, userLastName, userAge, userCountry)
+
+
 
 form.addEventListener("submit", async function(e) {
     e.preventDefault();
