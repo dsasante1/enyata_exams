@@ -27,16 +27,17 @@ class UserForm {
     }
 
     async completeForm(){
-    
    
-        await function checkFields(){
+        let result = await function checkFields(){
             
             if(this.userFirstName.value === "" || this.userLastName.value === "" || this.userCountry.value === "" || this.userAge.value === ""){
                 return new Error('a form is empty. fill it')
             }else{
                 return 'forms filled'
             }
-        } 
+        }
+        
+        return result;
     } 
     
 
@@ -58,16 +59,20 @@ let userFormDetails = new UserForm(userFirstName, userLastName, userAge, userCou
 
 
 
-form.addEventListener("submit", async function(e) {
+form.addEventListener("submit", function(e) {
     e.preventDefault();
 
     try{
-        await userFormDetails.completeForm();
+        userFormDetails.completeForm();
         userFormDetails.returnUserDetails();
 
     }catch(error){
         alert(error.message)
     }
+
+    userFirstName = ""
+    userLastName = ""
+    userAge = ""
 
 });
 

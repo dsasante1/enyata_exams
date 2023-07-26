@@ -6,10 +6,10 @@ and makes it available for manipulation by javascript dynamically. This adds a d
 to a static website.
 
 b. Promises
-A Promise represents an alternative method executing javascript code. Javascript executes code
-sequentially. A Promise makes javascript execution non-sequential. This enables fast code
+A Promise represents an alternative method of executing a javascript code. Javascript executes code
+sequentially. A Promise makes javascript code execution non-sequential. This enables fast code
 execution because expensive tasks are sent to a different execution path and when it is ready, it
-is merged to from the main path. Meanwhile, less expensive tasks are done by the main code execution
+is merged to the main path. Meanwhile, less expensive tasks are done by the main code execution
 path.
 
 

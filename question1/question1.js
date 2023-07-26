@@ -5,6 +5,8 @@ function checkNumbers (testNumber) {
   return false;
 }
 
+
+
 function fizzBuzz (n) {
   const result = [];
 
@@ -27,4 +29,6 @@ function fizzBuzz (n) {
   }
 }
 
-module.exports = fizzBuzz;
+console.log(fizzBuzz(6))
+
+// module.exports = fizzBuzz;
