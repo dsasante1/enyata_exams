@@ -17,11 +17,51 @@ let userAge = document.querySelector("#age");
 
 
 
-form.addEventListener("submit", function(e) {
+class UserForm {
+
+    constructor(userFirstName, userLastName, userAge, userCountry){
+        this.userFirstName = userFirstName;
+        this.userLastName = userLastName;
+        this.userAge = userAge;
+        this.userCountry = userCountry;
+    }
+
+    async completeForm(){
+    
+    if(this.userFirstName === "" || this.userLastName === "" || this.userCountry !== "" || this.userAge === ""){
+            throw new Error('fill all the fields of the form')
+        }
+    } 
     
 
 
+    returnUserDetails(){
 
+   
+        alert(
+            `My name is ${this.userFirstName} ${this.userLastName}.
+            I am from ${this.userCountry}. I am ${this.userAge} years old.
+            `) 
+}
+
+
+
+}
+
+
+
+let userFormDetails = new UserForm(userFirstName, userLastName, userAge, userCountry)
+
+form.addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    try{
+        await userFormDetails.completeForm();
+        userFormDetails.returnUserDetails();
+
+    }catch(error){
+        alert(error.message)
+    }
 
 });
 
@@ -29,45 +69,9 @@ form.addEventListener("submit", function(e) {
 
 
 
-function textFieldsNotEmpty(userFirstName, userLastName, userCountry, userAge){
-    if(userFirstName !== "" && userLastName !== " "){
-        if (userCountry !== "" && userAge !== ""){
-            return true
-        }
-    } return false
-
-}
 
 
 
-async function completeForm(userFirstName, userLastName, userCountry, userAge){
-
-    let formCompleted = await textFieldsNotEmpty(userFirstName, userLastName, userCountry, userAge);
-    
-    if (formCompleted === true){
-        return 'form completer by user'
-    }else{
-        return 'user must complete form'
-    }
-   
-}
 
 
 
-function fetchUserDetails(userFirstName, userLastName, userCountry, userAge){
-
-    if (formCompleted === true){
-        return(
-            `My name is ${userFirstName} ${userLastName}.
-            I am from ${userCountry}. I am ${userAge} years old.
-            `)
-        
-         
-    }else{
-        alert('the user has not completed the form')
-    }
-   
-   
-    
-
-}
