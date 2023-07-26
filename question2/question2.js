@@ -29,7 +29,7 @@ class UserForm {
     async completeForm(){
     
         if(this.userFirstName === "" || this.userLastName === "" || this.userCountry === "" || this.userAge === ""){
-            throw new Error('fill all the fields of the form')
+            throw new Error('a form is empty. fill it')
             }
     } 
     
@@ -38,7 +38,6 @@ class UserForm {
     returnUserDetails(){
         alert(`My name is ${this.userFirstName.value} ${this.userLastName.value}. I am from ${this.userCountry.value}. I am ${this.userAge.value} years old.`) 
 }
-
 
 
 }
