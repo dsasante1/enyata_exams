@@ -30,12 +30,15 @@ class UserForm {
     
         if(this.userFirstName === "" || this.userLastName === "" || this.userCountry === "" || this.userAge === ""){
             throw new Error('a form is empty. fill it')
-            }
+        }else{
+            return this.userFirstName.value, this.userLastName.value, this.userCountry.value, this.userAge.value
+        }
     } 
     
 
 
     returnUserDetails(){
+
         alert(`My name is ${this.userFirstName.value} ${this.userLastName.value}. I am from ${this.userCountry.value}. I am ${this.userAge.value} years old.`) 
 }
 
