@@ -39,5 +39,5 @@ function sortDescendingOrder(arrayItem){
 console.log(sortAscendingOrder(arrayItem))
 console.log(sortDescendingOrder(arrayItem))
 
-// module.exports = sortAscendingOrder;
-// module.exports = sortDescendingOrder;
+module.exports = sortAscendingOrder;
+module.exports = sortDescendingOrder;

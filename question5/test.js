@@ -2,11 +2,9 @@ const sortAscendingOrder = require('./question5.js');
 const sortDescendingOrder = require('./question5.js');
 
 test('sort unordered array in ascending order', () => {
-  expect(sortAscendingOrder([1, 4, 3, 2, 5])).toStrictEqual([1, 2, 3, 4, 5]);
+  expect(sortAscendingOrder([3, 4, 2, 5, 1])).toStrictEqual([ 1, 2, 3, 4, 5 ]);
+
 });
-
-
-const sortDescendingOrder = require('./question5.js');
 
 
 test('sort unordered array in descending order', () => {
