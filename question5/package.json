@@ -4,12 +4,10 @@
   "description": "",
   "main": "question5.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+     "test": "mocha './test*.js'"
+    },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "jest": "^29.6.1"
+   "author": "",
+   "license": "ISC"
   }
-}
+
